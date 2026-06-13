@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movies | I took all the blows and did it my way</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="main.html">Movies Library</a>
+    <p class="lede">All&nbsp;right,&nbsp;so,&nbsp;listen, why&nbsp;don't&nbsp;you give&nbsp;me&nbsp;a&nbsp;call&nbsp;when&nbsp;you wanna start taking things&nbsp;a&nbsp;little more seriously?<br>Here's my card.</p>
+  </header>
+
+  <main>
+    <section class="toolbar" aria-label="Movie filters">
+      <label class="search">
+        <span>Search</span>
+        <input id="searchInput" type="search">
+      </label>
+      <p id="movieCount" class="count"></p>
+    </section>
+
+    <section class="directors">
+      <article class="director-block">
+        <header class="director-header">
+          <div>
+            <p class="eyebrow">Director</p>
+            <h1><a class="director-link" href="quentin-tarantino.html">Quentin Tarantino</a></h1>
+          </div>
+          <span class="movie-total">5</span>
+        </header>
+
+        <div class="movie-grid">
+          <a class="movie-card" href="reservoir-dogs.html">
+            <span class="movie-year">1992</span>
+            <strong>Reservoir Dogs</strong>
+          </a>
+          <a class="movie-card" href="pulp-fiction.html">
+            <span class="movie-year">1994</span>
+            <strong>Pulp Fiction</strong>
+          </a>
+          <a class="movie-card" href="four-rooms.html">
+            <span class="movie-year">1995</span>
+            <strong>Four Rooms</strong>
+          </a>
+          <a class="movie-card" href="kill-bill-volumes-1-2.html">
+            <span class="movie-year">2003-2004</span>
+            <strong>Kill Bill: Volumes 1&2</strong>
+          </a>
+          <a class="movie-card" href="inglourious-basterds.html">
+            <span class="movie-year">2009</span>
+            <strong>Inglourious Basterds</strong>
+          </a>
+        </div>
+      </article>
+
+      <article class="director-block">
+        <header class="director-header">
+          <div>
+            <p class="eyebrow">Director</p>
+            <h1><a class="director-link" href="christopher-nolan.html">Christopher Nolan</a></h1>
+          </div>
+          <span class="movie-total">4</span>
+        </header>
+
+        <div class="movie-grid">
+          <a class="movie-card" href="the-dark-knight.html">
+            <span class="movie-year">2008</span>
+            <strong>The Dark Knight</strong>
+          </a>
+          <a class="movie-card" href="inception.html">
+            <span class="movie-year">2010</span>
+            <strong>Inception</strong>
+          </a>
+          <a class="movie-card" href="interstellar.html">
+            <span class="movie-year">2014</span>
+            <strong>Interstellar</strong>
+          </a>
+          <a class="movie-card" href="oppenheimer.html">
+            <span class="movie-year">2023</span>
+            <strong>Oppenheimer</strong>
+          </a>
+        </div>
+      </article>
+
+      <article class="director-block">
+        <header class="director-header">
+          <div>
+            <p class="eyebrow">Director</p>
+            <h1><a class="director-link" href="martin-scorsese.html">Martin Scorsese</a></h1>
+          </div>
+          <span class="movie-total">1</span>
+        </header>
+
+        <div class="movie-grid">
+          <a class="movie-card" href="the-wolf-of-wall-street.html">
+            <span class="movie-year">2013</span>
+            <strong>The Wolf of Wall Street</strong>
+          </a>
+        </div>
+      </article>
+
+      <article class="director-block">
+        <header class="director-header">
+          <div>
+            <p class="eyebrow">Director</p>
+            <h1><a class="director-link" href="ben-stiller.html">Ben Stiller</a></h1>
+          </div>
+          <span class="movie-total">1</span>
+        </header>
+
+        <div class="movie-grid">
+          <a class="movie-card" href="tropic-thunder.html">
+            <span class="movie-year">2008</span>
+            <strong>Tropic Thunder</strong>
+          </a>
+        </div>
+      </article>
+
+      <article class="director-block">
+        <header class="director-header">
+          <div>
+            <p class="eyebrow">Director</p>
+            <h1><a class="director-link" href="peter-weir.html">Peter Weir</a></h1>
+          </div>
+          <span class="movie-total">1</span>
+        </header>
+
+        <div class="movie-grid">
+          <a class="movie-card" href="truman-show.html">
+            <span class="movie-year">1998</span>
+            <strong>Truman Show</strong>
+          </a>
+        </div>
+      </article>
+
+      <article class="director-block">
+        <header class="director-header">
+          <div>
+            <p class="eyebrow">Director</p>
+            <h1><a class="director-link" href="robert-rodriguez.html">Robert Rodriguez</a></h1>
+          </div>
+          <span class="movie-total">4</span>
+        </header>
+
+        <div class="movie-grid">
+          <a class="movie-card" href="el-mariachi.html">
+            <span class="movie-year">1992</span>
+            <strong>El Mariachi</strong>
+          </a>
+          <a class="movie-card" href="desperado.html">
+            <span class="movie-year">1995</span>
+            <strong>Desperado</strong>
+          </a>
+          <a class="movie-card" href="once-upon-a-time-in-mexico.html">
+            <span class="movie-year">2003</span>
+            <strong>Once Upon a Time in Mexico</strong>
+          </a>
+          <a class="movie-card" href="sin-city.html">
+            <span class="movie-year">2005</span>
+            <strong>Sin City</strong>
+          </a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    const searchInput = document.querySelector('#searchInput');
+    const movieCount = document.querySelector('#movieCount');
+    const directorBlocks = [...document.querySelectorAll('.director-block')];
+    const movieCards = [...document.querySelectorAll('.movie-card')];
+
+    function updateSearch() {
+      const query = searchInput.value.toLowerCase().trim();
+      let visibleMovies = 0;
+
+      movieCards.forEach((card) => {
+        const directorName = card.closest('.director-block').querySelector('h1').textContent;
+        const text = `${card.textContent} ${directorName}`.toLowerCase();
+        const isVisible = text.includes(query);
+
+        card.hidden = !isVisible;
+        if (isVisible) {
+          visibleMovies += 1;
+        }
+      });
+
+      directorBlocks.forEach((block) => {
+        const hasVisibleMovies = [...block.querySelectorAll('.movie-card')].some((card) => !card.hidden);
+        block.hidden = !hasVisibleMovies;
+      });
+
+      movieCount.textContent = visibleMovies
+        ? `${visibleMovies} ${visibleMovies === 1 ? 'movie' : 'movies'}`
+        : 'Nothing found';
+    }
+
+    searchInput.addEventListener('input', updateSearch);
+    updateSearch();
+  </script>
+</body>
+</html>

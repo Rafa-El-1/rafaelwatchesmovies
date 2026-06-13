@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Series | I took all the blows and did it my way</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="main.html">Series Library</a>
+    <p class="lede">It is important to draw wisdom from many different places. If you take it from only one place, it becomes rigid and stale. Understanding others, the other elements and the other nations will help you become whole.</p>
+  </header>
+
+  <main>
+    <section class="toolbar" aria-label="Series filters">
+      <label class="search">
+        <span>Search</span>
+        <input id="searchInput" type="search" placeholder="Series">
+      </label>
+      <p id="seriesCount" class="count"></p>
+    </section>
+
+    <section class="series-grid" aria-label="Series">
+      <a class="series-card series-card-atla" href="atla.html">
+        <span class="series-kicker">Series</span>
+        <strong>ATLA</strong>
+      </a>
+      <a class="series-card series-card-true-detective" href="true-detective.html">
+        <span class="series-kicker">Series</span>
+        <strong>True Detective</strong>
+      </a>
+    </section>
+  </main>
+
+  <script>
+    const searchInput = document.querySelector('#searchInput');
+    const seriesCount = document.querySelector('#seriesCount');
+    const seriesCards = [...document.querySelectorAll('.series-card')];
+
+    function updateSearch() {
+      const query = searchInput.value.toLowerCase().trim();
+      let visibleSeries = 0;
+
+      seriesCards.forEach((card) => {
+        const isVisible = card.textContent.toLowerCase().includes(query);
+
+        card.hidden = !isVisible;
+        if (isVisible) {
+          visibleSeries += 1;
+        }
+      });
+
+      seriesCount.textContent = visibleSeries
+        ? `${visibleSeries} ${visibleSeries === 1 ? 'series' : 'series'}`
+        : 'Nothing found';
+    }
+
+    searchInput.addEventListener('input', updateSearch);
+    updateSearch();
+  </script>
+</body>
+</html>
