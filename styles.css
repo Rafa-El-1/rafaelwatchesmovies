@@ -573,8 +573,27 @@ code {
     margin: 0;
   }
 
+  .home-page .library-sections::before {
+    content: "";
+    order: 2;
+    min-height: 34svh;
+    background:
+      linear-gradient(rgba(17, 16, 14, 0.08), rgba(17, 16, 14, 0.5)),
+      url("images/tarantino-photo.jpg");
+    background-position: center 28%;
+    background-size: cover;
+  }
+
+  .home-page .section-card-movies {
+    order: 1;
+  }
+
+  .home-page .section-card-series {
+    order: 3;
+  }
+
   .home-page .section-card {
-    min-height: 50svh;
+    min-height: 33svh;
   }
 
   .section-card {
@@ -687,7 +706,11 @@ code {
   }
 
   .home-page .section-card {
-    min-height: 50dvh;
+    min-height: 34dvh;
+  }
+
+  .home-page .library-sections::before {
+    min-height: 30dvh;
   }
 
   .section-card strong {
