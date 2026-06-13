@@ -527,6 +527,9 @@ code {
     background-image: none;
     background-position: center top;
     background-size: cover;
+    height: 100svh;
+    min-height: 100svh;
+    overflow: hidden;
   }
 
   .site-header {
@@ -564,6 +567,13 @@ code {
     padding: 0 16px 44px;
   }
 
+  .home-page main {
+    height: 100svh;
+    min-height: 100svh;
+    overflow: hidden;
+    padding: 0;
+  }
+
   .library-sections {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -572,8 +582,10 @@ code {
   .home-page .library-sections {
     grid-template-columns: 1fr;
     grid-template-rows: minmax(0, 30svh) minmax(0, 34svh) minmax(0, 30svh);
+    height: 100svh;
     min-height: auto;
     margin: 0;
+    overflow: hidden;
   }
 
   .home-page .library-sections::before {
@@ -706,6 +718,9 @@ code {
 
   .home-page main {
     padding: 0;
+    height: 100dvh;
+    min-height: 100dvh;
+    overflow: hidden;
   }
 
   .home-page .section-card {
@@ -714,6 +729,7 @@ code {
 
   .home-page .library-sections {
     grid-template-rows: minmax(0, 31dvh) minmax(0, 32dvh) minmax(0, 31dvh);
+    height: 100dvh;
   }
 
   .section-card strong {
