@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -24,6 +28,7 @@ body {
   background-size: cover;
   color: var(--ink);
   font-family: Georgia, "Times New Roman", serif;
+  overflow-x: hidden;
 }
 
 body.home-page {
@@ -33,7 +38,6 @@ body.home-page {
   background-position: calc(50% + 200px) center;
   background-repeat: no-repeat;
   background-size: auto 112vh;
-  overflow: hidden;
 }
 
 .home-page main {
@@ -71,6 +75,10 @@ a {
   color: inherit;
 }
 
+img {
+  max-width: 100%;
+}
+
 .site-header {
   max-width: 1120px;
   margin: 0 auto;
@@ -97,6 +105,7 @@ a {
   font-weight: 700;
   letter-spacing: 0;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .header-movie-title {
@@ -107,6 +116,7 @@ a {
   font-weight: 700;
   line-height: 1;
   text-align: right;
+  overflow-wrap: anywhere;
 }
 
 .lede {
@@ -114,6 +124,7 @@ a {
   margin: 0;
   font-size: clamp(22px, 3vw, 38px);
   line-height: 1.12;
+  overflow-wrap: anywhere;
 }
 
 main {
@@ -193,6 +204,7 @@ main {
 .section-card strong {
   font-size: clamp(36px, 5vw, 62px);
   line-height: 0.95;
+  overflow-wrap: anywhere;
 }
 
 .section-card span:last-child {
@@ -258,6 +270,7 @@ main {
 .series-card strong {
   font-size: clamp(34px, 5vw, 58px);
   line-height: 0.98;
+  overflow-wrap: anywhere;
 }
 
 .toolbar {
@@ -340,6 +353,7 @@ main {
   margin: 0;
   font-size: clamp(30px, 5vw, 54px);
   line-height: 1;
+  overflow-wrap: anywhere;
 }
 
 .director-link {
@@ -398,6 +412,7 @@ main {
 .movie-card strong {
   font-size: 25px;
   line-height: 1.05;
+  overflow-wrap: anywhere;
 }
 
 .media-card-empty {
@@ -458,6 +473,7 @@ main {
 .dialogue-text {
   font-size: clamp(18px, 2vw, 25px);
   line-height: 1.36;
+  overflow-wrap: anywhere;
 }
 
 .dialogue-text p {
@@ -501,12 +517,54 @@ code {
 }
 
 @media (max-width: 680px) {
+  body {
+    background-attachment: scroll;
+    background-position: center top;
+  }
+
+  body.home-page {
+    background-position: center top;
+    background-size: cover;
+  }
+
   .site-header {
-    padding-top: 34px;
+    padding: 28px 16px 20px;
+  }
+
+  .site-header.compact {
+    padding-bottom: 6px;
+  }
+
+  .movie-header {
+    align-items: start;
+    display: grid;
+    gap: 4px;
+  }
+
+  .brand {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  .header-movie-title {
+    margin-bottom: 8px;
+    font-size: 28px;
+    line-height: 1.05;
+    text-align: left;
+  }
+
+  .lede {
+    font-size: 24px;
+    line-height: 1.16;
+  }
+
+  main {
+    padding: 0 16px 44px;
   }
 
   .library-sections {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .home-page .library-sections {
@@ -516,32 +574,78 @@ code {
   }
 
   .home-page .section-card {
-    min-height: 50vh;
+    min-height: 50svh;
+  }
+
+  .section-card {
+    min-height: 180px;
+    padding: 20px;
+  }
+
+  .section-card strong {
+    font-size: 42px;
   }
 
   .series-grid {
     grid-template-columns: 1fr;
   }
 
+  .series-card {
+    min-height: 220px;
+    padding: 20px;
+  }
+
+  .series-card strong {
+    font-size: 38px;
+  }
+
   .toolbar,
   .library-header,
   .director-header {
     display: grid;
+    gap: 12px;
+  }
+
+  .toolbar {
+    align-items: stretch;
+    margin: 8px 0 24px;
+  }
+
+  .count {
+    font-size: 14px;
   }
 
   .library-block,
   .director-block {
-    padding: 20px;
+    padding: 18px;
+  }
+
+  .library-header h1,
+  .director-header h1,
+  .director-header h2 {
+    font-size: 34px;
+  }
+
+  .item-total,
+  .movie-total {
+    width: 36px;
+    height: 36px;
   }
 
   .media-card,
   .movie-card {
-    min-height: 150px;
+    min-height: 132px;
+    padding: 16px;
+  }
+
+  .media-card strong,
+  .movie-card strong {
+    font-size: 22px;
   }
 
   .dialogue-ladder {
-    gap: 44px;
-    margin-top: 42px;
+    gap: 38px;
+    margin-top: 24px;
   }
 
   .dialogue-step,
@@ -557,5 +661,55 @@ code {
 
   .dialogue-step img {
     order: -1;
+  }
+
+  .dialogue-text {
+    font-size: 18px;
+    line-height: 1.42;
+  }
+
+  .dialogue-link {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header {
+    padding-inline: 14px;
+  }
+
+  main {
+    padding-inline: 14px;
+  }
+
+  .home-page main {
+    padding: 0;
+  }
+
+  .home-page .section-card {
+    min-height: 50dvh;
+  }
+
+  .section-card strong {
+    font-size: 36px;
+  }
+
+  .library-block,
+  .director-block {
+    padding: 14px;
+  }
+
+  .library-header h1,
+  .director-header h1,
+  .director-header h2 {
+    font-size: 30px;
+  }
+
+  .movie-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dialogue-text {
+    font-size: 17px;
   }
 }
