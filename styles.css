@@ -523,6 +523,8 @@ code {
   }
 
   body.home-page {
+    background-color: #11100e;
+    background-image: none;
     background-position: center top;
     background-size: cover;
   }
@@ -569,31 +571,32 @@ code {
 
   .home-page .library-sections {
     grid-template-columns: 1fr;
+    grid-template-rows: minmax(0, 30svh) minmax(0, 34svh) minmax(0, 30svh);
     min-height: auto;
     margin: 0;
   }
 
   .home-page .library-sections::before {
     content: "";
-    order: 2;
-    min-height: 34svh;
+    grid-row: 2;
+    min-height: 0;
     background:
-      linear-gradient(rgba(17, 16, 14, 0.08), rgba(17, 16, 14, 0.5)),
+      linear-gradient(rgba(17, 16, 14, 0.1), rgba(17, 16, 14, 0.58)),
       url("images/tarantino-photo.jpg");
-    background-position: center 28%;
+    background-position: center 18%;
     background-size: cover;
   }
 
   .home-page .section-card-movies {
-    order: 1;
+    grid-row: 1;
   }
 
   .home-page .section-card-series {
-    order: 3;
+    grid-row: 3;
   }
 
   .home-page .section-card {
-    min-height: 33svh;
+    min-height: 0;
   }
 
   .section-card {
@@ -706,11 +709,11 @@ code {
   }
 
   .home-page .section-card {
-    min-height: 34dvh;
+    min-height: 0;
   }
 
-  .home-page .library-sections::before {
-    min-height: 30dvh;
+  .home-page .library-sections {
+    grid-template-rows: minmax(0, 31dvh) minmax(0, 32dvh) minmax(0, 31dvh);
   }
 
   .section-card strong {
